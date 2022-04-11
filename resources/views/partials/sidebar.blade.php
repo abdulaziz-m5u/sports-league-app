@@ -31,5 +31,26 @@
                 </div>
             </li>
 
+            <!-- team -->
+            <li class="nav-item {{ request()->is('admin/teams') || request()->is('admin/teams') ? 'active' : '' }}">
+                <a class="nav-link" href="{{ route('admin.teams.index') }}">
+                    <i class="fas fa-cogs"></i>
+                    <span>{{ __('team') }}</span></a>
+            </li>
+
+            <!-- player -->
+            <li class="nav-item {{ request()->is('admin/players') || request()->is('admin/players') ? 'active' : '' }}">
+                <a class="nav-link" href="{{ route('admin.players.index') }}">
+                    <i class="fas fa-cogs"></i>
+                    <span>{{ __('player') }}</span></a>
+            </li>
+
+            <!-- game -->
+            <li class="nav-item {{ request()->is('admin/games') || request()->is('admin/games') ? 'active' : '' }}">
+                <a class="nav-link" href="{{ route('admin.games.index') }}">
+                    <i class="fas fa-cogs"></i>
+                    <span>{{ __('game') }}</span></a>
+            </li>
+
 
         </ul>

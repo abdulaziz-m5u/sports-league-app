@@ -100,11 +100,11 @@ class UserController extends Controller
     }
 
      /**
-     * Delete all selected Permission at once.
+     * Delete all selected User at once.
      *
      * @param Request $request
      */
-    public function massDestroy(Request $request)
+    public function massDestroy()
     {
         User::whereIn('id', request('ids'))->delete();
 
